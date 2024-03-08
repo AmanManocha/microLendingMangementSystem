@@ -67,28 +67,28 @@ const generateInvoiceNumber = async () => {
 
 
 const createInvoice = async (req, res) => {
-try{
+    // const requestBody = req.body;
+    // return res.status(200).json({ requestBody });
 
-    // Generate a unique invoice number
-    const invoiceNumber = await generateInvoiceNumber();
-    console.log('Generated Invoice Number:', invoiceNumber);
-    // Create new invoice using data from request body and generated invoice number
-    const newInvoice = new Invoices({
-        ...req.body, // Include other data from request body
-        invoiceID: invoiceNumber,
-        
-    });
-        
+    try {
+        // Generate a unique invoice number
+        const invoiceNumber = await generateInvoiceNumber();
+        console.log('invoiceNumber :', invoiceNumber);
+        // Create new invoice using data from request body and generated invoice number
+        const newInvoice = new Invoices({
+            ...req.body, // Include other data from request body
+            invoiceID: invoiceNumber,
+            
+        });
         // Save invoice to database
         const savedInvoice = await newInvoice.save();
         console.log('Saved Invoice:', savedInvoice);
         res.status(200).json(savedInvoice);
-
-}
-catch(err){
-    console.error('Error creating invoice:', err);
-    res.status(400).json({ message: 'Failed to create invoice', error: err });
-}
+    }
+    catch(err){
+        console.error('Error creating invoice:', err);
+        res.status(400).json({ message: 'Failed to create invoice', error: err });
+    }
 };
 
 const getAllInvoice = async (req, res) => {

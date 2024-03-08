@@ -10,7 +10,7 @@ const invoiceSchema = new mongoose.Schema({
   invoiceDate: { type: Date, required: true },
   dueDate: { type: Date, required: true },
   amountDue: { type: Number, required: true },
-  paymentStatus: { type: String, enum: ['Paid', 'Unpaid'], required: true },
+  paymentStatus: { type: String, enum: ['paid', 'unpaid'], required: true },
 //   billingAddress: { type: String },
 //   shippingAddress: { type: String },
 //   itemDetails: [{

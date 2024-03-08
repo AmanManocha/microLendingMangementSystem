@@ -11,4 +11,4 @@ router.get('/getAllInvoice', verifyToken, getAllInvoice)
 router.get('/searchInvoice', verifyToken, searchInvoice);
 router.get('/filterInvoice', verifyToken, filterInvoice)
 
-module.exports = { authRoutes: router };
+module.exports = { userRoutes: router };
