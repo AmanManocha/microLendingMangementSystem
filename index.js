@@ -6,6 +6,8 @@ const { userRoutes } = require('./src/routes/userRoute');
 const db = require('./src/config/mongoConnection');
 
 const app = express();
+app.use(express.json());
+app.set('view engine', 'ejs');
 const port = 3000;
 
 // Middleware

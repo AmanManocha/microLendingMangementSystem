@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice</title>
+</head>
+<body>
+    <center>
+        <h1>Invoice</h1>
+        <table border="1" cellpadding="15">
+            <tr>
+                <th>Invoice Number</th>
+                <td><%= invoice?.invoiceNumber %></td>
+            </tr>
+            <tr>
+                <th>Customer Name</th>
+                <td><%= invoice?.customer?.name %></td>
+            </tr>
+            <tr>
+                <th>Customer Email</th>
+                <td><%= invoice?.customer?.contactDetails?.email %></td>
+            </tr>
+            <tr>
+                <th>Customer Phone</th>
+                <td><%= invoice?.customer?.contactDetails?.phone %></td>
+            </tr>
+            <tr>
+                <th>Invoice Date</th>
+                <td><%= invoice?.invoiceDate %></td>
+            </tr>
+            <tr>
+                <th>Due Date</th>
+                <td><%= invoice?.dueDate %></td>
+            </tr>
+            <tr>
+                <th>Amount Due</th>
+                <td>$<%= invoice?.amountDue %></td>
+            </tr>
+            <tr>
+                <th>Payment Status</th>
+                <td><%= invoice?.paymentStatus %></td>
+            </tr>
+        </table>
+    </center>
+</body>
+</html>

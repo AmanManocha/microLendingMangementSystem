@@ -20,7 +20,7 @@ const Schema = {
     invoiceDate: Joi.date().required(),
     dueDate: Joi.date().required(),
     amountDue: Joi.number().required(),
-    paymentStatus: Joi.string().valid("paid", "unpaid").required(),
+    paymentStatus: Joi.string().valid("paid", "unpaid"),
     totalAmount: Joi.number(),
     createdBy: Joi.string(),
     createdAt: Joi.date(),
