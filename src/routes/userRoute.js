@@ -14,6 +14,5 @@ router.get('/filterInvoice', verifyToken, filterInvoice)
 router.post('/generatePaymentLinks',verifyToken, createPaymentLink);
 router.route('/success-payment').get(successPayment)
 router.route('/error-payment').get(errorPayment)
-// router.post('/webhook', proceessPayment);
 
 module.exports = { userRoutes: router };
