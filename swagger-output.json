@@ -5,7 +5,7 @@
     "description": "API Documentation",
     "version": "1.0.0"
   },
-  "host": "localhost:3002",
+  "host": "localhost:3000",
   "basePath": "/",
   "schemes": [
     "http"
@@ -252,5 +252,6 @@
         }
       }
     }
-  }
+  },
+  "url": "http://localhost:8000"
 }

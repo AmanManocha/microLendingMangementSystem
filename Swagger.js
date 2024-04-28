@@ -4,7 +4,7 @@ const doc = {
     title: 'Micro Lending Company',
     description: 'API Documentation'
   },
-  host: 'localhost:3002'
+  host: 'localhost:8000'
 };
 
 const outputFile = './swagger-output.json';
