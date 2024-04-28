@@ -1,12 +1,17 @@
 const express = require('express');
 const cors = require('cors')
 const bodyParser = require('body-parser');
+const swaggerUi = require('swagger-ui-express');
+const swaggerDocument = require('./swagger-output.json');
 
 const { userRoutes } = require('./src/routes/userRoute');
 const db = require('./src/config/mongoConnection');
 
+
+
 const app = express();
 app.use(express.json());
+app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 app.set('view engine', 'ejs');
 const port = 3000;
 
