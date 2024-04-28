@@ -20,10 +20,6 @@ app.use(cors())
 app.use(bodyParser.json());
 app.use('/api/auth', userRoutes);
 
-// app.listen(port, () => {
-//   console.log(`Server is running at http://localhost:${port}`);
-// });
-
 port.forEach(port => {
   const server = app.listen(port, () => {
     if (port === 3000) {
